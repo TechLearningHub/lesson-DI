@@ -1,0 +1,26 @@
+Definition: A service registered with a transient lifetime is created each time it is requested.
+This means that a new instance of the service is created every time it is injected into a consumer.
+
+Example:
+services.AddTransient<IMyService, MyService>();
+
+Behavior: Whenever you inject a service with a transient lifetime, a new instance of that service will be created.
+
+public class MyController
+{
+    private readonly IMyService _myService1;
+    private readonly IMyService _myService2;
+
+    public MyController(IMyService myService1, IMyService myService2)
+    {
+        _myService1 = myService1;
+        _myService2 = myService2;
+    }
+
+    public void DoSomething()
+    {
+        // _myService1 and _myService2 are different instances
+        _myService1.DoWork();
+        _myService2.DoWork();
+    }
+}

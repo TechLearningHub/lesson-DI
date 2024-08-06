@@ -1,0 +1,24 @@
+Definition: A service registered with a singleton lifetime is created once and shared throughout
+the application's lifetime. This means that the same instance is used across all requests and consumers.
+
+Example:
+services.AddSingleton<IMyService, MyService>();
+
+Behavior:
+All consumers receive the same instance of a singleton service.
+
+public class MyController
+{
+    private readonly IMyService _myService;
+
+    public MyController(IMyService myService)
+    {
+        _myService = myService;
+    }
+
+    public void DoSomething()
+    {
+        // _myService is the same instance throughout the application
+        _myService.DoWork();
+    }
+}

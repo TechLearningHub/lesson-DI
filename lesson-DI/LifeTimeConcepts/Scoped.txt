@@ -1,0 +1,25 @@
+Definition: A service registered with a scoped lifetime is created once per request.
+This means that within a single web request, all instances of a service are shared, but across different requests, 
+new instances are created.
+
+Example:
+services.AddScoped<IMyService, MyService>();
+
+Behavior:
+Within a single request, all instances of a scoped service are the same.
+
+public class MyController
+{
+    private readonly IMyService _myService;
+
+    public MyController(IMyService myService)
+    {
+        _myService = myService;
+    }
+
+    public void DoSomething()
+    {
+        // _myService is the same instance throughout the request
+        _myService.DoWork();
+    }
+}

@@ -1,0 +1,4 @@
+Service Lifetimes in Dependency Injection
+In .NET Core, services can be registered with different lifetimes, which determine how and when instances of the services
+are created and reused. The three main service lifetimes are Transient, Scoped, and Singleton.
+Here's an in-depth look at each (in separate pages)
