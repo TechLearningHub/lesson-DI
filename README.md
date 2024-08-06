@@ -1,4 +1,4 @@
-Understanding Dependency Injection 🧠
+    Understanding Dependency Injection 🧠
 At its core, Dependency Injection is about removing the hard-coded dependencies and instead injecting them at runtime, allowing our application to be more flexible and easier to maintain. .NET Core has built-in support for DI, making it a first-class citizen in the framework.
 
 Basic Concepts:
