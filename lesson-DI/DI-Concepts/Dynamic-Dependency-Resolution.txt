@@ -1,0 +1,33 @@
+Sometimes we might need to resolve dependencies at the runtime based on the specific conditions,
+we could achieve it by injecting IServiceProvider. 
+
+The IServiceProvider interface provides a way to retrieve service instances from the dependency injection container.
+
+GetService<T>(): This method tries to retrieve a service of the specified type.
+If the service is not registered, it returns null.
+GetRequiredService<T>(): This method retrieves a service of the specified type.
+If the service is not registered, it throws an exception.
+These methods are used to resolve services that have already been registered with the DI container.
+Registration of services is done using methods like AddTransient, AddScoped, and AddSingleton in the IServiceCollection interface.
+
+Example:
+public class MyController
+{
+    private readonly IMyService _myService;
+    private readonly IMyOtherService _myOtherService;
+
+    public MyController(IServiceProvider serviceProvider)
+    {
+        // Using GetService to resolve a service
+        _myService = serviceProvider.GetService<IMyService>();
+        
+        // Using GetRequiredService to resolve a service
+        _myOtherService = serviceProvider.GetRequiredService<IMyOtherService>();
+    }
+
+    public void DoSomething()
+    {
+        _myService.DoWork();
+        _myOtherService.DoOtherWork();
+    }
+}
