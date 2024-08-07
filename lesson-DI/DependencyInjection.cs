@@ -1,5 +1,5 @@
-using lesson_DI.Interfaces;
-using lesson_DI.Services;
+using Common.Interfaces;
+using Common.Services;
 
 namespace lesson_DI;
 

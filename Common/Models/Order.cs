@@ -1,4 +1,4 @@
-namespace lesson_DI.Models;
+namespace Common.Models;
 
 public class Order
 {
