@@ -1,6 +1,6 @@
-using lesson_DI.Models;
+using Common.Models;
 
-namespace lesson_DI.Interfaces;
+namespace Common.Interfaces;
 
 public interface IOrderValidator
 {

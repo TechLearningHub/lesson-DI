@@ -1,6 +1,7 @@
-using lesson_DI.Models;
 
-namespace lesson_DI.Interfaces;
+using Common.Models;
+
+namespace Common.Interfaces;
 
 public interface IPaymentProcessor
 {

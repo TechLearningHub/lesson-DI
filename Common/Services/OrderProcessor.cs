@@ -1,7 +1,7 @@
-using lesson_DI.Interfaces;
-using lesson_DI.Models;
+using Common.Interfaces;
+using Common.Models;
 
-namespace lesson_DI.Services;
+namespace Common.Services;
 
 public class OrderProcessor
 {
