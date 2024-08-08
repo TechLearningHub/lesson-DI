@@ -1,0 +1,33 @@
+Purpose:
+The purpose of the decorator pattern is to extend the behaviour of the functionality without changing functionality itself.
+
+Implementation:
+Implemented by creating a decorator class that implements the same interface as the object it decorates and holds
+a reference to the original object. Methods in the decorator class typically call methods on the original object,
+possibly adding extra behavior before or after.
+
+Use Cases:
+Commonly used to add functionality such as validation, formatting, or other enhancements to objects in a flexible and reusable way.
+
+Example:
+public class OrderValidatorDecorator : IOrderValidator
+{
+    private readonly IOrderValidator _orderValidator;
+    private readonly ILogger<OrderValidatorDecorator> _logger;
+
+    public OrderValidatorDecorator(
+        IOrderValidator orderValidator,
+        ILogger<OrderValidatorDecorator> logger)
+    {
+        _orderValidator = orderValidator;
+        _logger = logger;
+    }
+
+    public async Task<bool> ValidateOrderAsync(Order order)
+    {
+        _logger.LogInformation("Start execution of the validating order");
+        var result = await _orderValidator.ValidateOrderAsync(order);
+        _logger.LogInformation("Finished validating process of the order");
+        return result;
+    }
+}
