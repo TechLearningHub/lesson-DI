@@ -1,0 +1,13 @@
+Purpose:
+The purpose of the interceptors pattern is to extend the behaviour of the functionality without changing
+functionality itself (it is also as Decorator as well).
+But Interceptors are used in proxy-based scenarios to intercept and potentially alter method calls on objects.
+They are often used with dynamic proxies to inject behavior like logging, caching, or security checks.
+ 
+Implementation:
+Interceptors typically work with a proxy generation framework (e.g., Castle DynamicProxy) to intercept method
+calls on an interface or class. You define interceptor behavior separately from the target object and apply it dynamically.
+
+Example:
+You have an IOrderValidator interface, and you use an interceptor to log method calls on a proxy of IOrderValidator.
+The interceptor intercepts method calls made through the proxy.
