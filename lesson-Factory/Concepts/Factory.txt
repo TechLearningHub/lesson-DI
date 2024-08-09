@@ -1,0 +1,23 @@
+Purpose:
+To have different implementation for one interface
+The Factory pattern is particularly useful when you have multiple implementations of an interface and need
+to create instances of those implementations based on some condition or input.
+
+When to Use the Factory Pattern:
+
+1) Multiple Implementations:
+    You have several classes that implement the same interface, and the specific implementation to be used is determined at runtime.
+    
+2) Complex Object Creation:
+    The process of creating an object is complex or requires multiple steps, and you want to encapsulate this logic
+    in a separate class (the factory).
+    
+3) Centralized Object Creation:
+    You want to centralize the creation logic in one place, making the system more modular and easier to maintain.
+
+Summary:
+In summary, the Factory pattern is a powerful tool when dealing with multiple implementations of an interface,
+allowing for clean and flexible object creation.
+
+Resource:
+https://medium.com/cloud-native-daily/factory-design-pattern-in-c-for-net-core-projects-9afcef346f66
