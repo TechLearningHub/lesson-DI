@@ -1,0 +1,6 @@
+Summary:
+Interceptors:
+Used with proxies to inject behavior dynamically, commonly for logging, caching, or security.
+
+Decorators: 
+Used to wrap an instance to extend its behavior, typically by implementing the same interface.
