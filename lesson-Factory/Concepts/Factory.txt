@@ -1,0 +1,2 @@
+Resource:
+https://medium.com/cloud-native-daily/factory-design-pattern-in-c-for-net-core-projects-9afcef346f66

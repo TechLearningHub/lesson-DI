@@ -5,9 +5,9 @@ namespace Common.Services;
 
 public class NotificationService : INotificationService
 {
-    public Task SendOrderConfirmationAsync(Order order)
+    public async Task SendOrderConfirmationAsync(Order order)
     {
         //Some logic implementations
-        throw new NotImplementedException();
+        await Console.Out.WriteLineAsync($"Push notification has been sent by order id: {order.OrderId}.");
     }
 }
